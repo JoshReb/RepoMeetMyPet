@@ -1,0 +1,387 @@
+{% extends 'catalog/base.html' %}
+
+{% block body %}
+
+
+<!--a style="color: black;" href="{% url 'mascota' %}"> Mascotas! </a-->
+<!--a style="color: black;" href="{% url 'mascota-create' %}"> Crear </a-->
+
+{% load staticfiles %}
+  <!-- Start slider  -->
+  <section id="aa-slider">
+    <div class="aa-slider-area"> 
+      <!-- Top slider -->
+      <div class="aa-top-slider">
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="{% static 'catalog/img/slider/3.jpg' %}" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Mascotas</span>
+            <h2 class="aa-top-slider-title">Match, Meet, Play</h2>
+            <span class="aa-top-slider-off">Perros, Gatos y más mascotas</span>
+            <p class="aa-top-slider-price">Al servicio de nuestras mascotas</p>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="{% static 'catalog/img/slider/2.jpg' %}" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Mascotas</span>
+            <h2 class="aa-top-slider-title">Match, Meet, Play</h2>
+            <span class="aa-top-slider-off">Perros, Gatos y más mascotas</span>
+            <p class="aa-top-slider-price">Al servicio de nuestras mascotas</p>
+            </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="{% static 'catalog/img/slider/1.jpg' %}" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Mascotas</span>
+            <h2 class="aa-top-slider-title">Match, Meet, Play</h2>
+            <span class="aa-top-slider-off">Perros, Gatos y más mascotas</span>
+            <p class="aa-top-slider-price">Al servicio de nuestras mascotas</p>
+            </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->       
+         <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="{% static 'catalog/img/slider/5.jpg' %}" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Mascotas</span>
+            <h2 class="aa-top-slider-title">Match, Meet, Play</h2>
+            <span class="aa-top-slider-off">Perros, Gatos y más mascotas</span>
+            <p class="aa-top-slider-price">Al servicio de nuestras mascotas</p>
+            </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->        
+         <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="{% static 'catalog/img/slider/4.jpg' %}" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Mascotas</span>
+            <h2 class="aa-top-slider-title">Match, Meet, Play</h2>
+            <span class="aa-top-slider-off">Perros, Gatos y más mascotas</span>
+            <p class="aa-top-slider-price">Al servicio de nuestras mascotas</p>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+         <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="{% static 'catalog/img/slider/6.jpg' %}" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Mascotas</span>
+            <h2 class="aa-top-slider-title">Match, Meet, Play</h2>
+            <span class="aa-top-slider-off">Perros, Gatos y más mascotas</span>
+            <p class="aa-top-slider-price">Al servicio de nuestras mascotas</p>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+      </div>
+    </div>
+  </section>
+  <!-- End slider  -->
+
+  <!-- Advance Search -->
+  <form name="datos" action="publicaciones.html" onsubmit="return val_cb()">
+
+  
+  <section id="aa-advance-search">
+    <div class="container">
+      <div class="aa-advance-search-area">
+        <div class="form">
+         <div class="aa-advance-search-top">
+            <div class="row">
+              
+              <div class="col-md-4">
+                <div class="aa-single-advance-search">
+                  <select name="cb_categoria" id="cb_categoria">
+                   <option value="0" selected>Categorias</option>
+                   <option value="1">Cita de Juegos</option>
+                   <option value="2">Reproducción</option>
+                   <option value="3">Vender</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-2">
+                 <div class="aa-single-advance-search">
+                  <select name="cb_tipo" id="cb_tipo">
+                    <option value="0" selected>Tipo</option>
+                    <option value="1">Perro</option>
+                    <option value="2">Gato</option>
+                    <option value="3">Ave</option>
+                    <option value="4">Roedor</option>
+                    <option value="5">Reptil</option>
+                    <option value="6">Otro</option>
+                  </select>
+              </div>
+              </div>
+              <div class="col-md-2">
+                <div class="aa-single-advance-search">
+                  <select id="cb_raza" name="cb_raza">
+                   <option value="0" selected>Raza</option>
+                   <option value="1">n</option>
+                   <option value="2">b</option>
+                   <option value="3">d</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-2">
+                 <div class="aa-single-advance-search">
+                  <select name="cb_comuna" id="cb_comuna">
+                      <option value="0" selected>Comuna</option>
+                      <option value="1">Cerrillos</option>
+                      <option value="2">Cerro Navia</option>
+                      <option value="3">Conchali</option>
+                      <option value="4">El bosque</option>
+                      <option value="5">Estacion central</option>
+                      <option value="6">Huechuraba</option>
+                      <option value="7">Independencia</option>
+                      <option value="8">La cisterna</option>
+                      <option value="9">La florida</option>
+                      <option value="10">La granja</option>
+                      <option value="11">La pintana</option>
+                      <option value="12">La reina</option>
+                      <option value="13">Las condes</option>
+                      <option value="14">Lo barnechea</option>
+                      <option value="15">Lo espejo</option>
+                      <option value="16">Lo prado</option>
+                      <option value="17">Macul</option>
+                      <option value="18">Maipu</option>
+                      <option value="19">Ñunoa</option>
+                      <option value="20">Pedro Aguirre Cerda</option>
+                      <option value="21">Peñalolen</option>
+                      <option value="22">Providencia</option>
+                      <option value="23">Pudahuel</option>
+                      <option value="24">Quilicura</option>
+                      <option value="25">Quinta Normal</option>
+                      <option value="26">Recoleta</option>
+                      <option value="27">Renca</option>
+                      <option value="28">San Joaquin</option>
+                      <option value="29">San Miguel</option>
+                      <option value="30">San Ramon</option>
+                      <option value="31">Santiago</option>
+                      <option value="32">Vitacura</option>
+                    </select>
+                  </select>
+              </div>
+              </div>
+              <div class="col-md-2">
+                <div class="aa-single-advance-search">
+                  <input class="aa-search-btn" type="submit" value="Buscar">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</form>
+  <!-- / Advance Search -->
+
+  <!-- About us -->
+  <section id="aa-about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-about-us-area">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="aa-about-us-left">
+                  <img src="{% static 'catalog/img/about-us.png' %}" alt="image">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="aa-about-us-right">
+                  <div class="aa-title">
+                    <h2>Sobre Nosotros</h2>
+                    <span></span>
+                  </div>
+                  <p>Debido a nuestro amor por los animales y nuestras mascotas queremos lo mejor para ellos. La vida de las mascotas ya no es lo mismo que hace unos años, ahora ellos no solo se han ganado nuestros corazones, ahora nosotros reconocemos sus derechos. En nuestra pagina podrás dar a conocer a tu mascota con la facilidad de encontrar a otra mascota que sea de tu mismo sector y con distintos propositos como:</p>                 
+                  <ul>
+                    <li>Concertar citas de juegos con otras mascotas que amen jugar tanto como a la tuya.</li>
+                    <li>Buscar una pareja para tu mascota y reproducirse.</li>
+                    <li>Vender a tu mascota con un dueño que lo ame y lo cuide tanto como tu lo harias.</li>                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / About us -->
+
+  <!-- Latest property -->
+  <section id="aa-latest-property">
+    <div class="container">
+      <div class="aa-latest-property-area">
+        <div class="aa-title">
+          <h2>Ultimas Publicaciones</h2>
+          <span></span>
+          <p>Revisa nuestras ultimas publicaciones</p>         
+        </div>
+        <div class="aa-latest-properties-content">
+          <div class="row">
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a class="aa-properties-item-img">
+                  <img src="{% static 'catalog/img/item/1.jpg' %}" alt="img">
+                </a>
+                <div class="aa-tag for-sale">
+                  Cita de Juegos
+                </div>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>Perro</span>
+                    <span>Maipú</span>
+                    <span>Raza</span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a >Gerald</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
+                  </div>
+                  <div class="aa-properties-detial">
+                    
+                    <a href="{% url 'detalle_publicaciones' %}" class="aa-secondary-btn">Ver Detalles</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a class="aa-properties-item-img">
+                  <img src="{% static 'catalog/img/item/5.jpg' %}" alt="img">
+                </a>                
+                <div class="aa-tag sold-out">
+                  Reproducción
+                </div>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>Las Condes</span>
+                    <span>Perro</span>
+                    <span>Raza</span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a>Tito</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
+                  </div>
+                  <div class="aa-properties-detial">
+                    <a href="{% url 'detalle_publicaciones' %}" class="aa-secondary-btn">Ver Detalles</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a class="aa-properties-item-img">
+                  <img src="{% static 'catalog/img/item/6.jpg' %}" alt="img">
+                </a>
+                <div class="aa-tag for-rent">
+                  Vender
+                </div>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>La Florida</span>
+                    <span>Gato</span>
+                    <span>Raza</span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a>Susan</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
+                  </div>
+                  <div class="aa-properties-detial">
+                    <a href="{% url 'detalle_publicaciones' %}" class="aa-secondary-btn">Ver Detalles</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Latest property -->
+
+  <!-- Client Testimonial -->
+  <section id="aa-client-testimonial">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-client-testimonial-area">
+            <div class="aa-title">
+              <h2>¿Qué dicen nuestros usuarios?</h2>
+              <span></span>
+              <p>Muchos usuarios han disfrutado de la experiencia que ofrece nuestra página. Revisa que es lo dicen!</p>
+            </div>
+            <!-- testimonial content -->
+            <div class="aa-testimonial-content">
+              <!-- testimonial slider -->
+              <ul class="aa-testimonial-slider">
+                <li>
+                  <div class="aa-testimonial-single">
+                    <div class="aa-testimonial-img">
+                      <img src="{% static 'catalog/img/testimonial-1.png' %}" alt="testimonial img">
+                    </div>
+                    <div class="aa-testimonial-info">
+                        <p>Kai es una perrita muy juguetona y cariñosa, siempre quiere jugar con otros perros, asi que decidí publicar un aviso buscando otros perritos que quieran jugar con ella, lo que nunca me imagine es que terminaria enamorada de otro perrito!</p>
+                    </div>
+                    <div class="aa-testimonial-bio">
+                      <p>Ruth Otarola</p>
+                      <span>Dueña de Kai</span>
+                    </div>
+                  </div>
+                </li>
+                 <li>
+                  <div class="aa-testimonial-single">
+                    <div class="aa-testimonial-img">
+                      <img src="{% static 'catalog/img/testimonial-2.png' %}" alt="testimonial img">
+                    </div>
+                    <div class="aa-testimonial-info">
+                      <p>Me encanta la pagina, no solo mi perro ha hecho nuevos amigos, ahora yo tambien!</p>
+                    </div>
+                    <div class="aa-testimonial-bio">
+                      <p>Jane Doe</p>
+                      <span>Dueña de Firulais</span>
+                    </div>
+                  </div>
+                </li>
+                 <li>
+                  <div class="aa-testimonial-single">
+                    <div class="aa-testimonial-img">
+                      <img src="{% static 'catalog/img/testimonial-3.png' %}" alt="testimonial img">
+                    </div>
+                    <div class="aa-testimonial-info">
+                      <p>Me gusta darle lo mejor a mi gata, le encanta hacer nuevos amigos. Me gusta mucho la pagina, cada vez somos una comunidad mas grande y los amantes de los animales nos apoyamos.</p>
+                    </div>
+                    <div class="aa-testimonial-bio">
+                      <p>David Muller</p>
+                      <span>Dueño de Patitas Suaves</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Client Testimonial -->
+{% endblock %}

@@ -1,0 +1,247 @@
+{% extends 'catalog/base.html' %}
+
+{% block functions %}
+    <script>
+        function mensaje_like(){
+          alert('El propietario de la publicacion sera notificado. Si le gusta tu publicacion, se compartiran su información de contacto por email!');
+        }
+      </script>
+{% endblock %}
+
+{% block body %}
+{% load staticfiles %}
+  <!-- Start Proerty header  -->
+
+  <section id="aa-property-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-property-header-inner">
+            <h2>Detalle Publicación</h2>
+            <ol class="breadcrumb">
+            <li><a href="{% url 'index' %}">HOME</a></li>            
+            <li class="active">Detalles Publicación</li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <!-- End Proerty header  -->
+
+  <!-- Start Properties  -->
+  <section id="aa-properties">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="aa-properties-content">            
+            <!-- Start properties content body -->
+            <div class="aa-properties-details">
+             <div class="aa-properties-details-img">
+               <img src="{% static 'catalog/img/slider/1.jpg' %}" alt="img">
+               <img src="{% static 'catalog/img/slider/2.jpg' %}" alt="img">
+               <img src="{% static 'catalog/img/slider/3.jpg' %}" alt="img">
+             </div>
+             <div class="aa-properties-info">
+               <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, alias!</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptatibus veniam non voluptate, ipsa eius magni aliquid ratione sit, odio reprehenderit in quis repudiandae dolor.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur, veritatis, ducimus in aliquam magnam voluptatibus ullam libero fugiat temporibus at, aliquid explicabo placeat eligendi, assumenda magni saepe eius consequuntur.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dicta aliquid, autem, cum, impedit nostrum, rem molestias quisquam ab iure enim totam? Itaque esse ut adipisci officiis nulla repellendus ratione dolore, iste ex doloribus tenetur eos provident quam quasi maxime.</p>
+               <a class="aa-secondary-btn" href="#" onclick="mensaje_like()">Me Interesa</a>
+             </div>
+             <!-- Properties social share -->
+             <div class="aa-properties-social">
+               <ul>
+                 <li>Comparte!</li>
+                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+               </ul>
+             </div>
+             <!-- Nearby properties -->
+             <div class="aa-nearby-properties">
+               <div class="aa-title">
+                 <h2>Publicaciones similares</h2>
+                 <span></span>
+               </div>
+               <div class="aa-nearby-properties-area">
+                 <div class="row">
+                   <div class="col-md-6">
+                     <article class="aa-properties-item">
+                        <a class="aa-properties-item-img">
+                          <img alt="img" src="{% static 'catalog/img/item/1.jpg' %}">
+                        </a>
+                        <div class="aa-tag for-sale">
+                          Vender
+                        </div>
+                        <div class="aa-properties-item-content">
+                          <div class="aa-properties-info">
+                            <span>Comuna</span>
+                        <span>Especie</span>
+                        <span>Raza</span>
+                          </div>
+                          <div class="aa-properties-about">
+                            <h3><a >Titulo</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
+                          </div>
+                          <div class="aa-properties-detial">
+                            <a class="aa-secondary-btn" href="#">Ver Detalles</a>
+                          </div>
+                        </div>
+                      </article>
+                   </div>
+                   <div class="col-md-6">
+                     <article class="aa-properties-item">
+                      <a class="aa-properties-item-img" href="#">
+                        <img alt="img" src="{% static 'catalog/img/item/2.jpg' %}">
+                      </a>
+                      <div class="aa-tag for-sale">
+                        Vender
+                      </div>
+                      <div class="aa-properties-item-content">
+                        <div class="aa-properties-info">
+                          <span>Comuna</span>
+                          <span>Especie</span>
+                          <span>Raza</span>
+                        </div>
+                        <div class="aa-properties-about">
+                          <h3><a>Titulo</a></h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
+                        </div>
+                        <div class="aa-properties-detial">
+                          <a class="aa-secondary-btn" href="#">Ver Detalles</a>
+                        </div>
+                      </div>
+                    </article>
+                   </div>
+                 </div>
+               </div>
+
+             </div>
+
+            </div>           
+          </div>
+        </div>
+        <!-- Start properties sidebar -->
+        <div class="col-md-4">
+          <aside class="aa-properties-sidebar">
+            <!-- Start Single properties sidebar -->
+            <div class="aa-properties-single-sidebar">
+              <h3>Busqueda</h3> <!--a esto le habia puesto busqueda de publicaciones pero se veia feo :C rie rie si te estan pegando solo rie, rie como un monstruo, aunqe ya estes muerto solo rie, riete con alegrocidaaaaaad soy cucho lambreta-->
+              <form action="">
+                <div class="aa-single-advance-search">
+                  <select id="" name="">
+                   <option selected="" value="0">Que Buscas</option>
+                    <option value="1">Cita de Juegos</option>
+                    <option value="2">Reproducción</option>
+                    <option value="3">Venta</option>
+                  </select>
+                </div>
+                <div class="aa-single-advance-search">
+                  <select id="" name="">
+                    <option selected="" value="0">Tipo</option>
+                    <option value="1">Perro</option>
+                    <option value="2">Gato</option>
+                    <option value="3">Ave</option>
+                    <option value="4">Roedor</option>
+                    <option value="5">Reptil</option>
+                    <option value="6">Otro</option>
+                  </select>
+                </div>
+                <div class="aa-single-advance-search">
+                  <select id="" name="">
+                    <option selected="" value="0">Raza</option>
+                    <option value="1">Necesitamos</option>
+                    <option value="2">Base</option>
+                    <option value="3">De</option>
+                    <option value="4">Datos</option>
+                  </select>
+                </div>
+                <div class="aa-single-advance-search">
+                  <select>
+                      <option value="0" selected>Comuna</option>
+                      <option value="1">Cerrillos</option>
+                      <option value="2">Cerro Navia</option>
+                      <option value="3">Conchali</option>
+                      <option value="4">El bosque</option>
+                      <option value="5">Estacion central</option>
+                      <option value="6">Huechuraba</option>
+                      <option value="7">Independencia</option>
+                      <option value="8">La cisterna</option>
+                      <option value="9">La florida</option>
+                      <option value="10">La granja</option>
+                      <option value="11">La pintana</option>
+                      <option value="12">La reina</option>
+                      <option value="13">Las condes</option>
+                      <option value="14">Lo barnechea</option>
+                      <option value="15">Lo espejo</option>
+                      <option value="16">Lo prado</option>
+                      <option value="17">Macul</option>
+                      <option value="18">Maipu</option>
+                      <option value="19">Ñunoa</option>
+                      <option value="20">Pedro Aguirre Cerda</option>
+                      <option value="21">Peñalolen</option>
+                      <option value="22">Providencia</option>
+                      <option value="23">Pudahuel</option>
+                      <option value="24">Quilicura</option>
+                      <option value="25">Quinta Normal</option>
+                      <option value="26">Recoleta</option>
+                      <option value="27">Renca</option>
+                      <option value="28">San Joaquin</option>
+                      <option value="29">San Miguel</option>
+                      <option value="30">San Ramon</option>
+                      <option value="31">Santiago</option>
+                      <option value="32">Vitacura</option>
+                    </select>
+                  </select>
+              </div>
+                <div class="aa-single-advance-search">
+                  <input type="submit" value="Buscar" class="aa-search-btn">
+                </div>
+              </form>
+            </div>  
+            <!-- Start Single properties sidebar -->
+            <div class="aa-properties-single-sidebar">
+              <h3>Publicaciones Populares</h3>
+              <div class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" src="{% static 'catalog/img/item/1.jpg' %}" alt="img">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading"><a href="#">This is Title</a></h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>              
+              </div>
+              <div class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" src="{% static 'catalog/img/item/1.jpg' %}" alt="img">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading"><a href="#">This is Title</a></h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>              
+              </div>
+              <div class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" src="{% static 'catalog/img/item/1.jpg' %}" alt="img">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading"><a href="#">This is Title</a></h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>              
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Properties  -->
+{% endblock %}

@@ -1,0 +1,109 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Meet My Pet | Home</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'catalog/img/ico.png' %}">
+
+
+    <!-- Font awesome -->
+    <link href="{% static 'catalog/css/font-awesome.css' %}" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="{% static 'catalog/css/bootstrap.css' %}" rel="stylesheet">   
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="{% static 'catalog/css/slick.css' %}">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="{% static 'catalog/css/nouislider.css' %}">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="{% static 'catalog/css/jquery.fancybox.css' %}" type="text/css" media="screen" /> 
+    <!-- Theme color -->
+    <link id="switcher" href="{% static 'catalog/css/theme-color/default-theme.css' %}" rel="stylesheet">     
+
+
+    <!-- Main style sheet -->
+    <link rel="stylesheet" href="{% static 'catalog/css/style.css' %}" /><!--este siempre al final-->
+    
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <script>
+        function val_ingresar(){
+          var txtEmail = document.getElementById('txtEmail').value;
+          var txtContraseña = document.getElementById('txtContraseña').value;
+  
+          if(!(/\S+@\S+\.\S+/.test(txtEmail))){
+            alert('ERROR: Debe escribir un Correo válido');
+            document.datos.txtEmail.value="";
+            document.datos.txtEmail.focus();
+            return false;
+          }
+          if(txtContraseña == null || txtContraseña.length == 0 || /^\s+$/.test(txtConfiContraseña)){
+          alert('ERROR: Ingrese Contraseña');
+          document.datos.txtContraseña.focus();
+          return false;
+        }
+          return true;
+  
+        }
+      </script>
+  </head>
+  <body>
+  <section id="aa-signin">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-signin-area">
+            <div class="aa-signin-form">
+              <div class="aa-signin-form-title">
+                <a class="aa-property-home" href="{% url 'index' %}">Meet My Pet</a>
+                <h4>Ingresa a tu cuenta</h4>
+              </div>
+              <form class="contactform" name="datos" action="{% url 'index' %}" onsubmit="return val_ingresar()">                                                 
+                <div class="aa-single-field">
+                  <label for="email">Email <span class="required">*</span></label>
+                  <input type="email" value="" name="txtEmail" id="txtEmail" placeholder="Carl.Lec@miglobito.cl">
+                </div>
+                <div class="aa-single-field">
+                  <label for="password">Contraseña <span class="required">*</span></label>
+                  <input type="password" name="txtContraseña" id="txtContraseña" placeholder="voy_a_traer_el_pelo_suelto"> 
+                </div>
+                <div class="aa-single-field">
+                <label>
+                  <input type="checkbox"> Recordarme
+                </label>                                                          
+                </div> 
+                <div class="aa-single-submit">
+                  <input type="submit" value="Ingresar" class="aa-browse-btn" name="submit">  
+                  <p>Aún no tienes una cuenta? <a href="{% url 'registrarse' %}">CREA UNA AHORA!</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- jQuery library -->
+  <script src="{% static 'catalog/js/jquery.min.js' %}"></script>   
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="{% static 'catalog/js/bootstrap.js' %}"></script>   
+  <!-- slick slider -->
+  <script type="text/javascript" src="{% static 'catalog/js/slick.js' %}"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="{% static 'catalog/js/nouislider.js' %}"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="{% static 'catalog/js/jquery.mixitup.js' %}"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="{% static 'catalog/js/jquery.fancybox.pack.js' %}"></script>
+  <!-- Custom js -->
+  <script src="{% static 'catalog/js/custom.js' %}"></script> 
+  
+  </body>
+</html>

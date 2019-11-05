@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    {% block title %}<title>Meet My Pet | Home</title>{% endblock %}
+    {%  load staticfiles %}
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'catalog/img/ico.png' %}">
+
+
+    <!-- Font awesome -->
+    <link href="{% static 'catalog/css/font-awesome.css' %}" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="{% static 'catalog/css/bootstrap.css' %}" rel="stylesheet">   
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="{% static 'catalog/css/slick.css' %}">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="{% static 'catalog/css/nouislider.css' %}">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="{% static 'catalog/css/jquery.fancybox.css' %}" type="text/css" media="screen" /> 
+    <!-- Theme color -->
+    <link id="switcher" href="{% static 'catalog/css/theme-color/default-theme.css' %}" rel="stylesheet">     
+
+
+    <!-- Main style sheet -->
+    <link rel="stylesheet" href="{% static 'catalog/css/style.css' %}" /><!--este siempre al final-->
+    
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    {% block functions %}
+    {% endblock %}
+</head>
+<body class="aa-price-range">  
+    <!-- Pre Loader -->
+    <div id="aa-preloader-area">
+      <div class="pulse"></div>
+    </div>
+    <!-- SCROLL TOP BUTTON -->
+      <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+    <!-- END SCROLL TOP BUTTON -->
+  
+    <!-- Start header section -->
+    <header id="aa-header">  
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-header-area">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                  <div class="aa-header-left">
+                    <div class="aa-telephone-no">
+                      <span class="fa fa-phone"></span>
+                      1-900-523-3564
+                    </div>
+                    <div class="aa-email hidden-xs">
+                      <span class="fa fa-envelope-o"></span> info@meetmypet.com
+                    </div>
+                  </div>              
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                  <div class="aa-header-right">
+                    <a href="{% url 'mascota' %}" class="aa-register">Perfil</a>
+                    <a href="{% url 'registrarse' %}" class="aa-register">Registrarse</a>
+                    <a href="{% url 'ingresar' %}" class="aa-login">Ingresar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End header section -->
+  
+    <!-- Start menu section -->
+    <section id="aa-menu-area">
+      <nav class="navbar navbar-default main-navbar" role="navigation">  
+        <div class="container">
+          <div class="navbar-header">
+            <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- LOGO -->                                               
+            <!-- Text based logo -->
+             <a class="navbar-brand aa-logo" href="{% url 'index' %}"> Meet <span>My Pet</span></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+                <li class="active"><a href="{% url 'index' %}">HOME</a></li>
+                <li class="active"><a href="{% url 'publicaciones' %}">PUBLICACIONES</a></li>
+                <li class="active"><a href="{% url 'galeria' %}">GALERIA</a></li>
+            </ul>                            
+          </div>   
+        </div>          
+      </nav> 
+    </section>
+    <!-- End menu section -->
+  
+  
+    {% block body %}
+    {% endblock %}
+
+ 
+  <!-- Footer -->
+  <footer id="aa-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <div class="aa-footer-area">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-left">
+               <p>Designed by <a rel="nofollow">Penguins</a></p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-middle">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+              <div class="aa-footer-right">
+                <a href="#">Home</a>
+                <a href="#">Support</a>
+                <a href="#">License</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy & Term</a>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <!-- / Footer -->
+
+ 
+  
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="{% static 'catalog/js/jquery.min.js' %}"></script>   
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="{% static 'catalog/js/bootstrap.js' %}"></script>   
+  <!-- slick slider -->
+  <script type="text/javascript" src="{% static 'catalog/js/slick.js' %}"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="{% static 'catalog/js/nouislider.js' %}"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="{% static 'catalog/js/jquery.mixitup.js' %}"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="{% static 'catalog/js/jquery.fancybox.pack.js' %}"></script>
+  <!-- Custom js -->
+  <script src="{% static 'catalog/js/custom.js' %}"></script> 
+
+  </body>
+</html>

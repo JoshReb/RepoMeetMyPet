@@ -1,0 +1,55 @@
+{% extends 'catalog/base.html' %}
+
+{% block body %}
+{% load staticfiles %}
+  <!-- Start Proerty header  -->
+
+  <section id="aa-property-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="aa-property-header-inner">
+                <h2>Agrega una Mascota!</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section> 
+    <!-- End Proerty header  -->
+
+<form action="" method="post" enctype="multipart/form-data">
+    <section id="aa-contact">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="aa-contact-area">
+                    <section id="aa-advance-search">
+                        <div class="container">
+                        <div class="aa-advance-search-area">
+                            <div class="form">
+                            <div class="aa-advance-search-top">
+                                <div class="row">
+                                    {% csrf_token %}
+                                    {% include 'catalog/form-template.html' %}
+                                <br>
+                                <br>
+                                <div class="col-md-12">
+                                    <div class="aa-single-advance-search">
+                                    <input class="aa-search-btn" type="submit" value="Agregar Mascota">
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</form>
+
+{% endblock %}

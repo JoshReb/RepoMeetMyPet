@@ -1,0 +1,59 @@
+{% extends 'catalog/base.html' %}
+
+{% block body %}
+{% load staticfiles %}
+  <!-- Start Proerty header  -->
+
+  <section id="aa-property-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-property-header-inner">
+            <h2>Detalle Mascota</h2>
+            <ol class="breadcrumb">
+            <li><a href="{% url 'index' %}">HOME</a></li>            
+            <li class="active">Detalles Mascota</li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <!-- End Proerty header  -->
+
+<!-- Start Properties  -->
+<section id="aa-properties">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8">
+            <div class="aa-properties-content">            
+            <!-- Start properties content body -->
+            <div class="aa-properties-details">
+                <div class="aa-properties-details-img">
+                    <img style="object-fit: cover;width: 100%;height: 450px;" src="{{ mascota.foto.url }}">
+                </div>
+                <div class="aa-properties-info">
+                <h2>{{mascota.nombre}}</h2>
+                <p>{{mascota.tipo}}</p>
+                <p>{{mascota.raza}}</p>
+                <p>{{mascota.descripcion}}</p>
+                <form action="{% url 'mascota-delete' mascota.id %}" method="post">
+                  {% csrf_token %}
+                  <button type="submit" onclick="return confirm('¿Esta seguro que desea borrar esta mascota?')" class="aa-secondary-btn especial">BORRAR</button>
+              </form>
+              <form action="{% url 'mascota-update' mascota.id %}" method="">
+                  <button type="submit" class="aa-secondary-btn especial">MODIFICAR</button>
+              </form>
+                </div>
+    <!-- Properties social share -->
+    <div class="aa-properties-social">
+        <ul>
+          <li>Comparte!</li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
