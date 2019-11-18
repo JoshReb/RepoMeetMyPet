@@ -1,0 +1,3 @@
+Ambiente Virtual: django-mmp
+Usuario: Penguin
+Contraseña: barrosluco

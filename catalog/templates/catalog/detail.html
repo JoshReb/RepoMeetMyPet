@@ -11,7 +11,8 @@
           <div class="aa-property-header-inner">
             <h2>Detalle Mascota</h2>
             <ol class="breadcrumb">
-            <li><a href="{% url 'index' %}">HOME</a></li>            
+            <li><a href="{% url 'index' %}">HOME</a></li>   
+            <li><a href="{% url 'mascota' %}">Perfil</a></li>            
             <li class="active">Detalles Mascota</li>
           </ol>
           </div>
@@ -36,6 +37,7 @@
                 <h2>{{mascota.nombre}}</h2>
                 <p>{{mascota.tipo}}</p>
                 <p>{{mascota.raza}}</p>
+                <p>{{mascota.sexo}}</p>
                 <p>{{mascota.descripcion}}</p>
                 <form action="{% url 'mascota-delete' mascota.id %}" method="post">
                   {% csrf_token %}

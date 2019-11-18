@@ -88,14 +88,12 @@
                 {% for mascota in mascotas %}
                 <li >
                   <article class="aa-properties-item">
-                    <a  class="aa-properties-item-img" href="#"><img style="object-fit: cover;width: 100%;height: 250px;" alt="img" src="{{mascota.foto.url}}"></a>
-                    <div class="aa-tag for-rent">
-                      For Rent
-                    </div>
+                    <a  class="aa-properties-item-img" href="{% url 'detail' mascota.id %}"><img style="object-fit: cover;width: 100%;height: 250px;" alt="img" src="{{mascota.foto.url}}"></a>
                     <div class="aa-properties-item-content">
                       <div class="aa-properties-info">
                             <span>{{mascota.tipo}}</span>
                             <span>{{mascota.raza}}</span>
+                            <span>{{mascota.sexo}}</span>
                       </div>
                       <div class="aa-properties-about">
                             <h3><a href="{% url 'detail' mascota.id %}">{{mascota.nombre}}</a></h3>
@@ -177,33 +175,6 @@
       </div>
     </div>
   </section>
-      
 
-  <!-- Mis Publicaciones -->
-  <section id="aa-about-us">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="aa-about-us-area">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="aa-about-us-left">
-                    <div>
-                      <h2>Mis Publicaciones</h2>
-                      <span></span>
-                    </div>  
-                    <p>Aún no tienes publicaciones.</p>
-                    <div class="aa-properties-detial">
-                      <a href="#" class="aa-secondary-btn">+ Publicaciones</a> <!--% url 'publicar' %-->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  <!-- End Mis Publicaciones  -->
 
 {% endblock %}

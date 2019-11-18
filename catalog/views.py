@@ -45,11 +45,11 @@ class DetailView(generic.DetailView):
 
 class MascotaCreate(CreateView):
     model = Mascota
-    fields= [ 'nombre', 'tipo', 'raza', 'descripcion', 'foto']
+    fields= [ 'nombre', 'tipo', 'raza', 'sexo', 'descripcion', 'foto']
 
 class MascotaUpdate(UpdateView):
     model = Mascota
-    fields= [ 'nombre', 'tipo', 'raza', 'descripcion', 'foto']
+    fields= [ 'nombre', 'tipo', 'raza', 'sexo', 'descripcion', 'foto']
 
 class MascotaDelete(DeleteView):
     model = Mascota

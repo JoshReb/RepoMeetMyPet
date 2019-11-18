@@ -9,9 +9,13 @@ class Tipo(models.Model):
 
 class Mascota(models.Model):
     nombre = models.CharField(max_length=250)
-    #tipo = models.ForeignKey(Tipo, on_delete='models.CASCADE')
     tipo = models.ForeignKey('Tipo', on_delete=models.SET_NULL, null=True)
     raza = models.CharField(max_length=250)
+    choices_sexo = [
+        ('Hembra', 'hembra'),
+        ('Macho', 'macho')
+    ]
+    sexo = models.CharField(choices=choices_sexo, max_length=10, null=True)
     descripcion = models.CharField(max_length=500)
     foto = models.FileField(default='catalog\static\catalog\images\back.jpg')
 
