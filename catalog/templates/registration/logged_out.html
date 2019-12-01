@@ -1,0 +1,8 @@
+{% extends 'registration/base_reg.html' %}
+{% block body %}
+{% load staticfiles %}
+
+    <p>Has cerrado sesion!</p>
+    <a href="{% url 'login' %}">Haz click aqui para ingresar de nuevo.</a>
+
+{% endblock %}

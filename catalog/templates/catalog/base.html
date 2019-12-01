@@ -10,7 +10,6 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'catalog/img/ico.png' %}">
 
-
     <!-- Font awesome -->
     <link href="{% static 'catalog/css/font-awesome.css' %}" rel="stylesheet">
     <!-- Bootstrap -->
@@ -23,7 +22,6 @@
     <link rel="stylesheet" href="{% static 'catalog/css/jquery.fancybox.css' %}" type="text/css" media="screen" /> 
     <!-- Theme color -->
     <link id="switcher" href="{% static 'catalog/css/theme-color/default-theme.css' %}" rel="stylesheet">     
-
 
     <!-- Main style sheet -->
     <link rel="stylesheet" href="{% static 'catalog/css/style.css' %}" /><!--este siempre al final-->
@@ -64,9 +62,14 @@
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6">
                   <div class="aa-header-right">
-                    <a href="{% url 'mascota' %}" class="aa-register">Perfil</a>
-                    <a href="{% url 'registrarse' %}" class="aa-register">Registrarse</a>
-                    <a href="{% url 'ingresar' %}" class="aa-login">Ingresar</a>
+                    {% if user.is_authenticated %}
+                     <a class="aa-register">Bienvenido {{ user.username }}!   </a>
+                     <a href="{% url 'mascota' %}" class="aa-register">Perfil</a>
+                     <a href="{% url 'logout' %}" class="aa-login">Cerrar Sesion</a>
+                    {% else %}
+                      <a href="{% url 'registrarse' %}" class="aa-register">Registrarse</a>
+                      <a href="{% url 'login' %}" class="aa-login">Ingresar</a>
+                    {% endif %}
                   </div>
                 </div>
               </div>
@@ -132,6 +135,7 @@
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
               <div class="aa-footer-right">
+                <a>Número de Visitas: {{num_visits}}</a>
                 <a href="#">Home</a>
                 <a href="#">Support</a>
                 <a href="#">License</a>

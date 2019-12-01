@@ -1,3 +1,11 @@
+Información página Meet My Pet
+
 Ambiente Virtual: django-mmp
-Usuario: Penguin
+Usuario administrador: Penguin
 Contraseña: barrosluco
+
+Usuario de Prueba: UsuarioMeetMyPet
+Contraseña: comidachina
+
+*En página del perfil se pueden crear mascotas, modificarlas y borrarlas.
+*En página ingresar se puede ingresar con cualquiera de los dos usuarios.

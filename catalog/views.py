@@ -2,8 +2,13 @@ from .models import Mascota
 from django.shortcuts import render
 #from django.http import Http404
 
+
 def index(request):
-    return render(request,'catalog/index.html')
+    num_visits=request.session.get('num_visits',0)
+    num_visits=request.session['num_visits']=num_visits+1
+    contexto={'num_visits':num_visits,}
+    return render(request,'catalog/index.html', contexto)
+
 
 def publicaciones(request):
     return render(request,'catalog/publicaciones.html')
@@ -19,6 +24,12 @@ def registrarse(request):
 
 def detalle_publicaciones(request):
     return render(request,'catalog/detalle_publicaciones.html')
+
+def login(request):
+    return render(request,'registration/login.html')
+
+def logged_out(request):
+    return render(request,'registration/logged_out.html')
 
 def Mascota(request):
     mascotas = Mascota.objects.all()

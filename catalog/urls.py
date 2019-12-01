@@ -10,6 +10,8 @@ urlpatterns = [
     path('ingresar', views.ingresar, name='ingresar'),
     path('registrarse', views.registrarse, name='registrarse'),
     path('detalle_publicaciones', views.detalle_publicaciones, name='detalle_publicaciones'),
+    path('login', views.login, name='login'),
+    path('logged_out', views.logged_out, name='logged_out'),
 
     #path('mascota/', views.mascota, name='mascota'),
     path('mascota/', views.MascotaView.as_view(), name='mascota'),
